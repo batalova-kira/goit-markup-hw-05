@@ -59,11 +59,6 @@
           <button type="button" class="button primary" data-modal-open>
             Order Service
           </button>
-          <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-              <button type="button" data-modal-close>закрыть</button>
-            </div>
-          </div>
         </div>
       </section>
       <section class="section-about">
@@ -572,6 +567,16 @@
         </div>
       </div>
     </footer>
+    <!-- Modal window-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-icon" widht="8" height="8">
+            <use href="/images/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
