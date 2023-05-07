@@ -113,6 +113,8 @@ color: var(--title-text-color);
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
+
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link::after {
@@ -132,7 +134,7 @@ line-height: 1.5;
     background-color: var(--pressed-state-color);
 }
 
-.link:hover, .link:focus {color: var(--pressed-state-color);}
+.nav-link:hover, .nav-link:focus {color: var(--pressed-state-color);}
 
 .address { margin-left: auto;}
 
@@ -150,6 +152,8 @@ line-height: 1.5;
 color: var(--primary-text-color);
 font-size: 16px;
 line-height: 1.5;
+
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover, .address-link:focus {
@@ -252,12 +256,13 @@ letter-spacing: 0.02em;
     background-color: var(--primary-brand-color);
     color: var(--light-color);
     border-radius: 50%;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover, .socials-link:focus {
 
     background-color: var(--pressed-state-color);
-    color: var(--light-color);
 }
 
 
@@ -381,7 +386,11 @@ font-style: normal;
 height: 100%;
 width: 100%;
 border: 1px solid var(--subtle-text-color);
-border-radius: 4px;}
+border-radius: 4px;
+
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .customers-link:hover,
 .customers-link:focus {
@@ -456,16 +465,18 @@ background-color: var(--title-text-color);}
         background-color: var(--primary-brand-color);
         color: var(--light-color);
         border-radius: 50%;
-}
+
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
 
 .footer-social:hover, .footer-social:focus {
     background-color: var(--success-color);
-    color: var(--light-color);
 }
 
 
 .footer-icon {
-    fill: var(--light-color);
+    fill: currentColor;
 }
 
 /* Button */
@@ -512,11 +523,13 @@ min-height: 56px;
 
 color: var(--white-background);
 background-color: var(--primary-brand-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.primary:hover,
 .button.button.primary:focus {
-    color: var(--white-background);
     background-color: var(--pressed-state-color);
 }
 
@@ -525,6 +538,11 @@ background-color: var(--primary-brand-color);
 color: var(--primary-brand-color);
 background-color: var(--light-color);
 border: 1px solid var(--accent-color);
+
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.secondary:hover,
@@ -557,6 +575,8 @@ margin-bottom: 48px;}
 .example-link {
     font-family: inherit;
     display: block;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .example-link:hover, .example-link:focus {
@@ -622,6 +642,8 @@ line-height: 1.5;}
             width: 408px;
     
             background-color: var(--modal-background);
+            border-radius: 4px;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
         }
 
         .modal-close-btn {
@@ -639,8 +661,22 @@ line-height: 1.5;}
             border-radius: 50%;
             border: 1px solid rgba(0, 0, 0, 0.1);
             background-color: var(--modal-button);
+            fill: var(--title-text-color);
+
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            
         }
 
-        .modal-close-icon {
-            fill: var(--title-text-color);
+        .modal-close-btn:hover, 
+        .modal-close-btn:focus {
+            background-color: var(--pressed-state-color);
         }
+        
+        .modal-close-icon {
+        fill: currentColor;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+
+        .modal-close-icon:hover, .modal-close-icon:focus {
+        fill: var(--white-background);}
+
+        
