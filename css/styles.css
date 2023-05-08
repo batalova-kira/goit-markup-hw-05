@@ -584,7 +584,7 @@ margin-bottom: 48px;}
 
 .example-thumb {
     position: relative;
-overflow: hidden;
+    overflow: hidden;
 
     width: 360px;
     height: 300px;
@@ -612,13 +612,13 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.5;}
 
-.example-link:hover .overlay, 
-.example-link:focus .overlay {
+.example-link:hover .example-back, 
+.example-link:focus .example-back {
     transform: translateY(0%);
 }
 
-.overlay {
-position: absolute;
+.example-back {
+    position: absolute;
     top: 0;
     left: 0;
     transform: translateY(100%);
@@ -629,16 +629,12 @@ position: absolute;
     height: 100%;
     padding: 40px 32px;
 
-    background-color: var(--pressed-state-color);
-}
-
-.example-back {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
 
     color: var(--light-color);
-    
+    background-color: var(--pressed-state-color);
     }
 
     /* Modal window */
